@@ -42,6 +42,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust as needed based on header height */
 }
 
 body {
@@ -51,6 +52,7 @@ body {
   line-height: 1.6;
   position: relative;
   overflow-x: hidden;
+  margin-bottom: 0;
 }
 
 /* 3D Gradient Background */
@@ -247,7 +249,7 @@ nav {
 
 /* Hero Section */
 .hero {
-  padding: 8rem 0 5rem;
+  padding: 5.5rem 0 3.5rem; /* Reduce top and bottom padding to remove excess space */
   position: relative;
   overflow: hidden;
 }
@@ -262,6 +264,7 @@ nav {
 
 .profile-container {
   flex-shrink: 0;
+  position: relative; /* Needed for sketch positioning */
 }
 
 .profile-image {
@@ -332,6 +335,8 @@ nav {
   font-weight: 600;
   transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+  overflow: visible; /* Allow sketch to overflow */
 }
 
 .btn.primary {
@@ -369,8 +374,11 @@ nav {
 }
 
 .section {
-  margin-bottom: 5rem;
-  padding: 2rem;
+  margin-bottom: 4rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(31,38,135,0.04);
+  background: rgba(255,255,255,0.85);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards;
@@ -400,21 +408,23 @@ nav {
 }
 
 .section-header {
-  margin-bottom: 2rem;
-  position: relative;
+  margin-bottom: 2.2rem;
+  position: relative; /* Needed for sketch positioning */
 }
 
 .section-header h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--text-dark);
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
 }
 
 .accent-line {
-  width: 50px;
+  width: 60px;
   height: 4px;
   background-color: var(--primary);
   margin-top: 0.5rem;
+  border-radius: 2px;
   position: relative;
   overflow: hidden;
 }
@@ -897,14 +907,15 @@ nav {
 
 /* Footer */
 footer {
-  background-color: rgba(30, 41, 59, 0.9);
-  color: white;
-  padding: 4rem 0 2rem;
+  background: linear-gradient(90deg, #1e293b 60%, #2563eb 100%);
+  color: #fff;
+  padding: 3rem 0 1.5rem;
+  border-top: none;
+  box-shadow: 0 -2px 16px rgba(31,38,135,0.07);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-content {
@@ -914,12 +925,13 @@ footer {
 }
 
 .footer-info h2 {
+  font-family: 'Caveat', cursive;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  color: #fff;
 }
 
 .footer-info p {
-  color: var(--gray-300);
+  color: #cbd5e1;
   max-width: 25rem;
 }
 
@@ -964,8 +976,11 @@ footer {
 }
 
 .footer-bottom {
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
   text-align: center;
 }
 
@@ -1079,4 +1094,363 @@ footer {
     opacity: 1;
     transform: none;
   }
-} 
+}
+
+/* Sketch Elements */
+.sketch {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5; /* Slightly more subtle */
+  pointer-events: none; /* Prevent interference */
+  z-index: -1; /* Place behind content generally */
+}
+
+.sketch-underline {
+  background-image: url('/sketch-underline.svg'); /* Placeholder */
+  width: 220px;
+  height: 25px;
+  bottom: 1.3rem;
+  left: -10px;
+  transform: rotate(-2.5deg);
+  z-index: 1; /* Ensure it's above hero text bg if any */
+}
+
+.sketch-arrow {
+  background-image: url('/sketch-arrow.svg'); /* Placeholder */
+  width: 90px;
+  height: 60px;
+  top: 35%;
+  right: -50px;
+  transform: rotate(18deg);
+}
+
+.sketch-profile-ring {
+  background-image: url('/sketch-profile-ring.svg'); /* Placeholder */
+  width: 260px; /* Slightly larger than profile image */
+  height: 260px;
+  top: -20px; /* Adjust position */
+  left: -20px;
+  transform: rotate(5deg);
+}
+
+.sketch-header-doodle {
+  background-image: url('/sketch-doodle1.svg'); /* Placeholder */
+  width: 100px;
+  height: 40px;
+  top: -10px;
+  right: 10px;
+  transform: rotate(-8deg);
+}
+
+.sketch-header-doodle.alt {
+  background-image: url('/sketch-doodle2.svg'); /* Placeholder for variation */
+  left: 10px;
+  right: auto;
+  transform: rotate(6deg);
+}
+
+.sketch-button-swirl {
+  background-image: url('/sketch-swirl.svg'); /* Placeholder */
+  width: 40px;
+  height: 40px;
+  top: -15px;
+  right: -15px;
+  transform: rotate(10deg);
+  opacity: 0.7;
+}
+
+/* Masked Info Style */
+.masked-info {
+  cursor: help; /* Indicate interactivity */
+  border-bottom: 1px dashed var(--text-light); /* Subtle visual cue */
+  transition: background-color 0.3s ease;
+}
+
+.masked-info:hover {
+  background-color: var(--highlight-yellow); /* Highlight on hover */
+}
+
+/* Newsletter Fancy Styles */
+.fancy-newsletter {
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.07);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  margin: 2rem auto 0 auto;
+  max-width: 480px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+.fancy-newsletter h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+}
+.scribble-accent {
+  display: inline-block;
+  width: 60px;
+  height: 22px;
+  background: url('/sketch-underline.svg') no-repeat center/contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  pointer-events: none;
+  z-index: 2;
+}
+.newsletter-form {
+  display: none; /* Hide unused form if any remains */
+}
+.newsletter-btn {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  position: relative;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.13);
+  transition: background 0.2s, transform 0.2s;
+}
+.newsletter-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px) scale(1.04);
+}
+.scribble-btn {
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+  background: url('/sketch-swirl.svg') no-repeat center/contain;
+  margin-left: 0.2rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Newsletter Popup Styles */
+.newsletter-popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 2.5rem;
+  transform: translateX(-50%) scale(0.98);
+  z-index: 2000;
+  background: transparent;
+  width: 100%;
+  max-width: 420px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.newsletter-popup.visible {
+  display: block;
+  animation: popupFadeIn 0.5s;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+@keyframes popupFadeIn {
+  from { opacity: 0; transform: translateX(-50%) scale(0.95); }
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+.newsletter-popup .popup-content {
+  background: rgba(255,255,255,0.97);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.13);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+.newsletter-popup .popup-text h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 1.7rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+  position: relative;
+  display: inline-block;
+}
+.newsletter-popup .scribble-accent {
+  width: 50px;
+  height: 18px;
+  background-size: contain;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+}
+.newsletter-popup .newsletter-form {
+  margin-top: 1rem;
+}
+.close-popup {
+  position: absolute;
+  top: 0.7rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--primary-light);
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 10;
+}
+.close-popup:hover {
+  color: var(--primary-dark);
+}
+@media (max-width: 600px) {
+  .fancy-newsletter, .newsletter-popup .popup-content {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .newsletter-popup {
+    max-width: 98vw;
+    left: 1vw;
+    transform: none;
+  }
+}
+
+/* --- PRO DESIGN IMPROVEMENTS --- */
+
+/* Newsletter CTA at Top */
+.pro-newsletter {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  background: rgba(255,255,255,0.92);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 540px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.newsletter-title {
+  color: var(--primary);
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+  position: relative;
+  display: inline-block;
+}
+.newsletter-desc {
+  color: var(--text-light);
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+}
+.pro-btn {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 0.7rem 2.2rem;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.13);
+  transition: background 0.2s, transform 0.2s;
+  position: relative;
+  z-index: 1;
+}
+.pro-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px) scale(1.04);
+}
+.scribble-accent {
+  display: inline-block;
+  width: 60px;
+  height: 22px;
+  background: url('/sketch-underline.svg') no-repeat center/contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  pointer-events: none;
+  z-index: 2;
+}
+.scribble-btn {
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+  background: url('/sketch-swirl.svg') no-repeat center/contain;
+  margin-left: 0.2rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Hero Section Pro Tweaks */
+.pro-hero {
+  padding-top: 3.5rem;
+  padding-bottom: 2.5rem;
+}
+.pro-name {
+  font-size: 2.7rem;
+  font-family: 'Caveat', cursive;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+.pro-title {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.pro-tagline {
+  font-size: 1.08rem;
+  color: var(--text-dark);
+  margin-bottom: 1.2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Section Spacing & Dividers */
+.section {
+  margin-bottom: 4rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(31,38,135,0.04);
+  background: rgba(255,255,255,0.85);
+}
+.section-header {
+  margin-bottom: 2.2rem;
+}
+.section-header h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+.accent-line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+/* Footer Polished */
+footer {
+  background: linear-gradient(90deg, #1e293b 60%, #2563eb 100%);
+  color: #fff;
+  padding: 3rem 0 1.5rem;
+  border-top: none;
+  box-shadow: 0 -2px 16px rgba(31,38,135,0.07);
+}
+.footer-info h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.footer-info p {
+  color: #cbd5e1;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 700px) {
+  .pro-newsletter { max-width: 98vw; padding: 1.2rem 0.5rem; }
+  .pro-hero { padding-top: 2.2rem; padding-bottom: 1.2rem; }
+  .pro-name { font-size: 2rem; }
+  .section-header h2 { font-size: 1.3rem; }
+}

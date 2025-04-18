@@ -31,37 +31,47 @@
             </nav>
         </div>
     </header>
-
-    <section class="hero glass-effect">
+    <section class="hero glass-effect pro-hero">
         <div class="container">
             <div class="hero-content">
                 <div class="profile-container">
                     <div class="profile-image"></div>
+                    <div class="sketch sketch-profile-ring"></div> <!-- Sketch around profile -->
                 </div>
                 <div class="hero-text">
-                    <h1>Vamsi Penmetsa</h1>
-                    <h2>Lead DevOps Engineer</h2>
+                    <div class="sketch sketch-underline"></div>
+                    <h1 class="pro-name">Vamsi Penmetsa</h1>
+                    <h2 class="pro-title">Lead DevOps Engineer</h2>
+                    <p class="pro-tagline">Empowering teams to build, automate, and scale cloud-native solutions.</p>
+                    <div class="sketch sketch-arrow"></div>
                     <div class="contact-details">
-                        <p><i class="fas fa-phone"></i> +48 509 622 708</p>
-                        <p><i class="fas fa-envelope"></i> vamsivarmapenmatsa@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> <span class="masked-info" data-text="+48 509 622 708">Phone Masked</span></p>
+                        <p><i class="fas fa-envelope"></i> <span class="masked-info" data-text="vamsivarmapenmatsa@gmail.com">Email Masked</span></p>
                         <p><i class="fas fa-map-marker-alt"></i> Warsaw Metropolitan Area, Warsaw, 00-441, Poland</p>
-                        <p><i class="fab fa-linkedin"></i> www.linkedin.com/in/vamsipenmetsa</p>
+                        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vamsipenmetsa" target="_blank">linkedin.com/in/vamsipenmetsa</a></p>
                     </div>
                     <div class="hero-cta">
-                        <a href="#contact" class="btn primary">Get in Touch</a>
-                        <a href="#" class="btn secondary">Download Resume</a>
+                        <a href="#contact" class="btn primary pro-btn">Get in Touch <div class="sketch sketch-button-swirl"></div></a>
+                        <a href="/Vamsi_Penmetsa_Resume.pdf" class="btn secondary pro-btn" download>Download Resume</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <div class="container">
+        <div class="newsletter-cta fancy-newsletter pro-newsletter">
+            <h3 class="newsletter-title">Stay Updated!<span class="scribble-accent"></span></h3>
+            <p class="newsletter-desc">Insights on DevOps, SRE, and Cloud. No spam, just value.</p>
+            <a href="https://vamsipenmetsa.medium.com/subscribe" target="_blank" class="btn primary newsletter-btn pro-btn">Subscribe <span class="scribble-btn"></span></a>
+        </div>
+    </div>
     <main class="content">
         <div class="container">
             <section id="about" class="section glass-card">
                 <div class="section-header">
                     <h2>About Me</h2>
                     <div class="accent-line"></div>
+                    <div class="sketch sketch-header-doodle"></div> <!-- Sketch near header -->
                 </div>
                 <div class="card">
                     <p>Vamsi is a dynamic DevOps professional with a stellar career path, transitioning from a Manual Tester to a <span class="highlight-yellow">Lead Systems Engineer at EPAM Systems</span>, boasting an impressive <span class="highlight-green">7 active Azure Certifications</span>. With extensive expertise in Azure DevOps, Azure Cloud, AKS, ARM templates, and Terraform for Infrastructure as Code (IAC), he leverages PowerShell and Python scripting to enhance system automation and efficiency.</p>
@@ -90,6 +100,7 @@
                 <div class="section-header">
                     <h2>Education</h2>
                     <div class="accent-line"></div>
+                    <div class="sketch sketch-header-doodle alt"></div> <!-- Sketch near header -->
                 </div>
                 <div class="card">
                     <div class="education-item">
@@ -104,6 +115,7 @@
                 <div class="section-header">
                     <h2>Skills & Languages</h2>
                     <div class="accent-line"></div>
+                    <div class="sketch sketch-header-doodle"></div> <!-- Sketch near header -->
                 </div>
                 <div class="skills-grid">
                     <div class="skill-card">
@@ -166,6 +178,7 @@
                 <div class="section-header">
                     <h2>Professional Certifications</h2>
                     <div class="accent-line"></div>
+                    <div class="sketch sketch-header-doodle alt"></div> <!-- Sketch near header -->
                 </div>
                 <div class="certifications-grid">
                     <div class="certification-card">
@@ -195,6 +208,7 @@
                 <div class="section-header">
                     <h2>Professional Experience</h2>
                     <div class="accent-line"></div>
+                    <div class="sketch sketch-header-doodle"></div> <!-- Sketch near header -->
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -341,26 +355,41 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <h2>Connect With Me</h2>
+                    <h2 style="font-family: 'Caveat', cursive; font-size:2.2rem;">Connect With Me</h2>
                     <p>I'm always open to discussing new projects, technologies, or opportunities.</p>
                     <div class="contact-details-footer">
-                        <p><i class="fas fa-phone"></i> +48 509 622 708</p>
-                        <p><i class="fas fa-envelope"></i> vamsivarmapenmatsa@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> <span class="masked-info" data-text="+48 509 622 708">Phone Masked</span></p>
+                        <p><i class="fas fa-envelope"></i> <span class="masked-info" data-text="vamsivarmapenmatsa@gmail.com">Email Masked</span></p>
                         <p><i class="fas fa-map-marker-alt"></i> Warsaw, Poland</p>
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/vamsipenmetsa" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="mailto:vamsivarmapenmatsa@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/vamsipenmetsa" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/vamsipenmetsa" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/vamsi_penmetsa" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://medium.com/@vamsipenmetsa" target="_blank" class="social-link" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                    <a href="mailto:vamsivarmapenmatsa@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Vamsi Penmetsa. All rights reserved.</p>
+                <p>&copy; 2025 Vamsi Penmetsa. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Newsletter Pop-up -->
+    <div class="newsletter-popup" id="newsletterPopup">
+        <div class="container popup-content">
+            <div class="popup-text">
+                <h3 style="font-family: 'Caveat', cursive; font-size:1.7rem; position:relative; display:inline-block;">Stay Updated!
+                    <span class="scribble-accent"></span>
+                </h3>
+                <p>Get insights on DevOps, SRE, and Cloud delivered to your inbox.</p>
+            </div>
+            <a href="https://vamsipenmetsa.medium.com/subscribe" target="_blank" class="btn primary newsletter-btn" style="font-family: 'Caveat', cursive; font-size:1.2rem; position:relative;">Subscribe <span class="scribble-btn"></span></a>
+            <button class="close-popup" id="closePopupBtn" aria-label="Close newsletter banner">&times;</button>
+        </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
 </body>
-</html> 
+</html>

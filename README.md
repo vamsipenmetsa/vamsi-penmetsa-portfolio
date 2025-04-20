@@ -29,7 +29,7 @@ A modern, professional portfolio website for Vamsi Penmetsa, showcasing his expe
    ```
    npm run dev
    ```
-4. Open your browser - Vite will automatically open http://localhost:5173
+4. Open your browser - Vite will automatically open https://vamsipenmetsa.github.io/vamsi-penmetsa-portfolio/
 
 ## Building for Production
 
@@ -40,6 +40,30 @@ npm run build
 ```
 
 The built files will be in the `dist` directory, ready to be deployed.
+
+## Deployment to GitHub Pages
+
+This project is configured for deployment to GitHub Pages.
+
+1.  **Base Path:** Ensure the `base` property in `vite.config.js` is set to your repository name (e.g., `/vamsi-penmetsa-portfolio/`).
+    ```javascript
+    // vite.config.js
+    import { defineConfig } from 'vite'
+
+    export default defineConfig({
+      base: '/vamsi-penmetsa-portfolio/',
+      // ... other config
+    })
+    ```
+2.  **Build:** Run `npm run build` to generate the production files in the `dist` folder.
+3.  **Push to GitHub:** Commit and push your changes, including the `dist` directory, to your main branch.
+4.  **Configure GitHub Pages:**
+    *   Go to your repository settings on GitHub.
+    *   Navigate to the "Pages" section.
+    *   Under "Build and deployment", select "Deploy from a branch".
+    *   Choose your main branch (`main` or `master`) and select the `/dist` folder as the source.
+    *   Save the changes.
+5.  **Live Site:** Your portfolio should be live shortly at: [https://vamsipenmetsa.github.io/vamsi-penmetsa-portfolio/](https://vamsipenmetsa.github.io/vamsi-penmetsa-portfolio/)
 
 ## Project Structure
 
@@ -81,4 +105,4 @@ Modify the color variables in the `:root` section of `style.css` to change the c
   --primary-dark: #1d4ed8;
   /* other colors */
 }
-``` 
+```

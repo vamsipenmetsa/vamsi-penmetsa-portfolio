@@ -405,8 +405,10 @@ nav {
   border-radius: 1.2rem;
   box-shadow: 0 2px 12px rgba(31,38,135,0.04);
   background: rgba(255,255,255,0.85);
-  opacity: 0;
-  transform: translateY(20px);
+  /* Make sections visible by default */
+  opacity: 1;
+  transform: translateY(0);
+  /* Animation will be applied but won't affect initial visibility */
   animation: fadeInUp 0.8s ease forwards;
 }
 
@@ -719,8 +721,10 @@ nav {
 .timeline-item {
   position: relative;
   padding-bottom: 3rem;
-  opacity: 0;
-  transform: translateX(-20px);
+  /* Make timeline items visible by default */
+  opacity: 1;
+  transform: translateX(0);
+  /* Animation will still be applied but won't affect initial visibility */
   animation: fadeInRight 0.5s ease forwards;
 }
 
@@ -846,10 +850,14 @@ nav {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
-  opacity: 0;
-  transform: translateY(20px);
+  /* Make cards visible by default with basic transform */
+  opacity: 1;
+  transform: translateY(0);
+  /* The animation will override these when it works */
+  animation: none;
 }
 
+/* Animation will be applied only when JS adds this class */
 .skill-card.animate {
   animation: fadeInUp 0.5s ease forwards;
 }

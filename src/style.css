@@ -296,7 +296,7 @@ nav {
   height: 220px;
   border-radius: 50%;
   background-color: var(--gray-200);
-  background-image: url('/vamsi-profile.jpg');
+  background-image: url('../public/vamsi-profile.jpg');
   background-size: cover;
   background-position: center;
   border: 5px solid rgba(255, 255, 255, 0.7);
@@ -1136,7 +1136,7 @@ footer {
 }
 
 .sketch-underline {
-  background-image: url('/sketch-underline.svg'); /* Placeholder */
+  background-image: url('../public/sketch-underline.svg'); /* Updated to relative path */
   width: 220px;
   height: 25px;
   bottom: 1.3rem;
@@ -1146,7 +1146,7 @@ footer {
 }
 
 .sketch-arrow {
-  background-image: url('/sketch-arrow.svg'); /* Placeholder */
+  background-image: url('../public/sketch-arrow.svg'); /* Updated to relative path */
   width: 90px;
   height: 60px;
   top: 35%;
@@ -1155,7 +1155,7 @@ footer {
 }
 
 .sketch-profile-ring {
-  background-image: url('/sketch-profile-ring.svg'); /* Placeholder */
+  background-image: url('../public/sketch-profile-ring.svg'); /* Updated to relative path */
   width: 260px; /* Slightly larger than profile image */
   height: 260px;
   top: -20px; /* Adjust position */
@@ -1164,7 +1164,7 @@ footer {
 }
 
 .sketch-header-doodle {
-  background-image: url('/sketch-doodle1.svg'); /* Placeholder */
+  background-image: url('../public/sketch-doodle1.svg'); /* Updated to relative path */
   width: 100px;
   height: 40px;
   top: -10px;
@@ -1173,14 +1173,14 @@ footer {
 }
 
 .sketch-header-doodle.alt {
-  background-image: url('/sketch-doodle2.svg'); /* Placeholder for variation */
+  background-image: url('../public/sketch-doodle2.svg'); /* Updated to relative path */
   left: 10px;
   right: auto;
   transform: rotate(6deg);
 }
 
 .sketch-button-swirl {
-  background-image: url('/sketch-swirl.svg'); /* Placeholder */
+  background-image: url('../public/sketch-swirl.svg'); /* Updated to relative path */
   width: 40px;
   height: 40px;
   top: -15px;
@@ -1224,7 +1224,7 @@ footer {
   display: inline-block;
   width: 60px;
   height: 22px;
-  background: url('/sketch-underline.svg') no-repeat center/contain;
+  background: url('../public/sketch-underline.svg') no-repeat center/contain;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
@@ -1259,7 +1259,7 @@ footer {
   display: inline-block;
   width: 32px;
   height: 18px;
-  background: url('/sketch-swirl.svg') no-repeat center/contain;
+  background: url('../public/sketch-swirl.svg') no-repeat center/contain;
   margin-left: 0.2rem;
   pointer-events: none;
   z-index: 2;
@@ -1442,7 +1442,7 @@ footer {
   display: inline-block;
   width: 60px;
   height: 22px;
-  background: url('/sketch-underline.svg') no-repeat center/contain;
+  background: url('../public/sketch-underline.svg') no-repeat center/contain;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
@@ -1453,7 +1453,7 @@ footer {
   display: inline-block;
   width: 32px;
   height: 18px;
-  background: url('/sketch-swirl.svg') no-repeat center/contain;
+  background: url('../public/sketch-swirl.svg') no-repeat center/contain;
   margin-left: 0.2rem;
   pointer-events: none;
   z-index: 2;

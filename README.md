@@ -2,6 +2,8 @@
 
 A modern, professional portfolio website for Vamsi Penmetsa, showcasing his experience as a DevOps and SRE professional.
 
+👉 **Live Site**: [vamsipenmetsa.github.io/vamsi-penmetsa-portfolio](https://vamsipenmetsa.github.io/vamsi-penmetsa-portfolio/)
+
 ## Features
 
 - Clean, professional design with subtle animations
@@ -29,7 +31,7 @@ A modern, professional portfolio website for Vamsi Penmetsa, showcasing his expe
    ```
    npm run dev
    ```
-4. Open your browser - Vite will automatically open https://vamsipenmetsa.github.io/vamsi-penmetsa-portfolio/
+4. Open your browser - Vite will automatically open http://localhost:5173
 
 ## Building for Production
 
@@ -43,27 +45,39 @@ The built files will be in the `dist` directory, ready to be deployed.
 
 ## Deployment to GitHub Pages
 
-This project is configured for deployment to GitHub Pages.
+This site is configured for deployment to GitHub Pages. Follow these steps:
 
-1.  **Base Path:** Ensure the `base` property in `vite.config.js` is set to your repository name (e.g., `/vamsi-penmetsa-portfolio/`).
-    ```javascript
-    // vite.config.js
-    import { defineConfig } from 'vite'
+1. Push your code to a GitHub repository named `vamsi-penmetsa-portfolio`
 
-    export default defineConfig({
-      base: '/vamsi-penmetsa-portfolio/',
-      // ... other config
-    })
-    ```
-2.  **Build:** Run `npm run build` to generate the production files in the `dist` folder.
-3.  **Push to GitHub:** Commit and push your changes, including the `dist` directory, to your main branch.
-4.  **Configure GitHub Pages:**
-    *   Go to your repository settings on GitHub.
-    *   Navigate to the "Pages" section.
-    *   Under "Build and deployment", select "Deploy from a branch".
-    *   Choose your main branch (`main` or `master`) and select the `/dist` folder as the source.
-    *   Save the changes.
-5.  **Live Site:** Your portfolio should be live shortly at: [https://vamsipenmetsa.github.io/vamsi-penmetsa-portfolio/](https://vamsipenmetsa.github.io/vamsi-penmetsa-portfolio/)
+2. Add a `base` property to your `vite.config.js` file:
+   ```js
+   export default defineConfig({
+     plugins: [/* your plugins */],
+     base: '/vamsi-penmetsa-portfolio/',
+     // other config options
+   })
+   ```
+
+3. Make sure you have the following script in your `package.json`:
+   ```json
+   "scripts": {
+     "deploy": "npm run build && gh-pages -d dist"
+   }
+   ```
+
+4. Install the `gh-pages` package:
+   ```
+   npm install gh-pages --save-dev
+   ```
+
+5. Deploy your site:
+   ```
+   npm run deploy
+   ```
+
+6. Go to your GitHub repository settings, navigate to "Pages" section, and ensure the site is being built from the `gh-pages` branch.
+
+Your site will be available at `https://vamsipenmetsa.github.io/vamsi-penmetsa-portfolio/`
 
 ## Project Structure
 

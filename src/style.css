@@ -128,13 +128,13 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.8);
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.15);
+  background: rgba(255, 255, 255, 0.85); /* Slightly more opaque */
+  transform: translateY(-6px); /* Slightly more lift */
+  box-shadow: 0 14px 36px 0 rgba(31, 38, 135, 0.18); /* Enhanced shadow */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -155,11 +155,12 @@ img {
 a {
   color: var(--primary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 a:hover {
   color: var(--primary-dark);
+  /* Consider adding a subtle transform if desired, e.g., transform: translateY(-1px); */
 }
 
 .container {
@@ -214,7 +215,7 @@ nav {
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(-5deg); /* Added slight rotation */
 }
 
 .nav-links {
@@ -231,6 +232,7 @@ nav {
   color: var(--text-dark);
   padding: 0.5rem 0;
   position: relative;
+  transition: color 0.3s ease; /* Ensure color transition is smooth */
 }
 
 .nav-links a::after {
@@ -262,6 +264,7 @@ nav {
 .newsletter-header-link:hover {
   background-color: rgba(37, 99, 235, 0.2);
   color: var(--primary-dark);
+  transform: scale(1.03); /* Add subtle scale */
 }
 
 .newsletter-header-link::after {
@@ -298,12 +301,12 @@ nav {
   background-position: center;
   border: 5px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .profile-image:hover {
-  transform: scale(1.03);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: scale(1.04); /* Slightly increased scale */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18); /* Enhanced shadow */
 }
 
 .hero-text {
@@ -354,7 +357,7 @@ nav {
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition for buttons */
   cursor: pointer;
   position: relative;
   overflow: visible; /* Allow sketch to overflow */
@@ -368,8 +371,9 @@ nav {
 
 .btn.primary:hover {
   background-color: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  transform: translateY(-3px); /* Slightly more lift */
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45); /* Enhanced shadow */
+  filter: brightness(1.1); /* Add brightness */
 }
 
 .btn.secondary {
@@ -382,9 +386,10 @@ nav {
 }
 
 .btn.secondary:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque */
+  transform: translateY(-3px); /* Slightly more lift */
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12); /* Enhanced shadow */
+  filter: brightness(1.05); /* Add subtle brightness */
 }
 
 /* Main Content */
@@ -479,12 +484,12 @@ nav {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px); /* Slightly more lift */
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
 }
 
 /* Highlights */
@@ -575,12 +580,12 @@ nav {
   border-radius: 0.5rem;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .language-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px); /* Adjusted lift */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
 }
 
 .language-item h4 {
@@ -609,13 +614,13 @@ nav {
   align-items: center;
   gap: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .certification-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
-  background-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-4px); /* Adjusted lift */
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+  background-color: rgba(255, 255, 255, 0.75); /* Adjusted background */
 }
 
 .certification-icon {
@@ -629,11 +634,11 @@ nav {
   border-radius: 50%;
   flex-shrink: 0;
   font-size: 1.25rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .certification-card:hover .certification-icon {
-  transform: rotate(15deg);
+  transform: rotate(10deg) scale(1.1); /* Added scale */
 }
 
 .certification-card h3 {
@@ -651,11 +656,12 @@ nav {
   border-left: 4px solid var(--primary);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .featured-project:hover {
-  transform: translateX(5px);
+  transform: translateX(6px); /* Adjusted translate */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Add subtle shadow */
 }
 
 .featured-project h3 {
@@ -774,11 +780,12 @@ nav {
   background-color: var(--primary);
   border: 3px solid white;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease; /* Smoother transition */
 }
 
 .timeline-item:hover .timeline-marker {
-  transform: scale(1.2);
+  transform: scale(1.25); /* Slightly larger scale */
+  background-color: var(--primary-dark); /* Darken marker */
 }
 
 .timeline-content h3 {
@@ -838,7 +845,7 @@ nav {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
   opacity: 0;
   transform: translateY(20px);
 }
@@ -848,9 +855,9 @@ nav {
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  background-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-6px); /* Adjusted lift */
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+  background-color: rgba(255, 255, 255, 0.75); /* Adjusted background */
 }
 
 .skill-icon {
@@ -864,11 +871,11 @@ nav {
   border-radius: 50%;
   margin-bottom: 1rem;
   font-size: 1.25rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .skill-card:hover .skill-icon {
-  transform: rotate(10deg);
+  transform: rotate(8deg) scale(1.1); /* Adjusted rotation and added scale */
 }
 
 .skill-card h3 {
@@ -893,13 +900,13 @@ nav {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-left: 4px solid var(--accent);
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .achievement-banner:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  background-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-6px); /* Adjusted lift */
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+  background-color: rgba(255, 255, 255, 0.75); /* Adjusted background */
 }
 
 .achievement-icon {
@@ -913,11 +920,11 @@ nav {
   border-radius: 50%;
   flex-shrink: 0;
   font-size: 1.25rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
 .achievement-banner:hover .achievement-icon {
-  transform: scale(1.1) rotate(15deg);
+  transform: scale(1.15) rotate(12deg); /* Adjusted scale and rotation */
 }
 
 .achievement-banner p {
@@ -986,14 +993,15 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
   font-size: 1.25rem;
 }
 
 .social-link:hover {
   background-color: var(--primary);
   color: white;
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.1); /* Adjusted lift and added scale */
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3); /* Add shadow */
 }
 
 .footer-bottom {
@@ -1244,7 +1252,8 @@ footer {
 }
 .newsletter-btn:hover {
   background: var(--primary-dark);
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-3px) scale(1.03); /* Adjusted lift and added scale */
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35); /* Adjusted shadow */
 }
 .scribble-btn {
   display: inline-block;
@@ -1426,7 +1435,8 @@ footer {
 }
 .pro-btn:hover {
   background: var(--primary-dark);
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-3px); /* Adjusted lift */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
 }
 .scribble-accent {
   display: inline-block;

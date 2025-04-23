@@ -336,7 +336,7 @@ nav {
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Change from center to flex-start */
   gap: 0.5rem;
 }
 
@@ -524,6 +524,7 @@ nav {
 .highlight-accent {
   background: var(--highlight-accent);
   box-shadow: 0.2em 0 0 var(--highlight-accent), -0.2em 0 0 var(--highlight-accent);
+  padding: 0.1em 0.2em; /* Add consistent padding */
 }
 
 .highlight-yellow:hover,
@@ -1040,6 +1041,7 @@ footer {
   
   .contact-details p {
     justify-content: center;
+    /* align-items: center; Remove this line, inherit flex-start */
   }
   
   .footer-content {
@@ -1058,7 +1060,7 @@ footer {
   }
   
   .hero {
-    padding: 7rem 0 4rem;
+    padding: 8.5rem 0 4rem; /* Increased top padding from 7rem to 8.5rem */
   }
   
   .hero-text h1 {
@@ -1085,6 +1087,12 @@ footer {
   
   .section {
     padding: 1.5rem;
+  }
+
+  /* Ensure alignment persists on smaller screens if not already covered */
+  .contact-details p {
+    justify-content: center;
+    /* align-items: center; Remove this line, inherit flex-start */
   }
 }
 
@@ -1116,6 +1124,16 @@ footer {
   
   .card {
     padding: 1.5rem;
+  }
+
+  .hero {
+    padding-top: 8rem; /* Ensure sufficient padding on very small screens too */
+  }
+
+  /* Ensure alignment persists on very small screens if not already covered */
+  .contact-details p {
+    justify-content: center;
+    /* align-items: center; Remove this line, inherit flex-start */
   }
 }
 
@@ -1625,5 +1643,146 @@ footer {
   .creative-newsletter {
     padding: 1.5rem 1rem;
     margin-top: 0;
+  }
+}
+
+/* LinkedIn Community Highlight */
+.linkedin-community {
+   margin-top: 1.5rem;
+   font-size: 1rem;
+   color: var(--text-dark);
+   line-height: 1.5;
+   margin-bottom: 1.5rem; /* Added margin-bottom for spacing */
+}
+
+.linkedin-community a {
+   font-weight: 600;
+}
+
+/* Adjust highlight style slightly if needed */
+.highlight-blue {
+   padding: 0.1em 0.2em; /* Slightly adjust padding */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .contact-details p {
+    justify-content: center;
+    /* align-items: center; Remove this line, inherit flex-start */
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .social-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .hero {
+    padding: 8.5rem 0 4rem; /* Increased top padding from 7rem to 8.5rem */
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.25rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .skills-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+
+  /* Ensure alignment persists on smaller screens if not already covered */
+  .contact-details p {
+    justify-content: center;
+    /* align-items: center; Remove this line, inherit flex-start */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    padding: 0.625rem 1.25rem;
+  }
+  
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-marker {
+    left: -1.5rem;
+  }
+  
+  .section {
+    padding: 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+
+  .hero {
+    padding-top: 8rem; /* Ensure sufficient padding on very small screens too */
+  }
+
+  /* Ensure alignment persists on very small screens if not already covered */
+  .contact-details p {
+    justify-content: center;
+    /* align-items: center; Remove this line, inherit flex-start */
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .gradient-sphere {
+    animation: none;
+  }
+  
+  .section,
+  .timeline-item,
+  .skill-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }

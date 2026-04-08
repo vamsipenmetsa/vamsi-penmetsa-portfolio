@@ -7,28 +7,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Dracula Theme Colors
-        dracula: {
-          bg: '#282a36',
-          current: '#44475a',
-          fg: '#f8f8f2',
-          comment: '#6272a4',
-          cyan: '#8be9fd',
-          green: '#50fa7b',
-          orange: '#ffb86c',
-          pink: '#ff79c6',
-          purple: '#bd93f9',
-          red: '#ff5555',
-          yellow: '#f1fa8c',
-        }
+        paper: '#fdfbf7',
+        pencil: {
+          DEFAULT: '#2c3e50',
+          light: '#7f8c8d',
+        },
+        marker: {
+          yellow: '#fff9c4',
+          pink: '#ffcdd2',
+          green: '#c8e6c9',
+          blue: '#bbdefb',
+        },
       },
       fontFamily: {
-        mono: ['"Fira Code"', '"JetBrains Mono"', 'monospace'],
-        sans: ['"Fira Code"', '"JetBrains Mono"', 'monospace'], // Defaulting to mono for terminal feel
+        hand: ['"Patrick Hand"', 'cursive'],
       },
       boxShadow: {
-        'terminal': '0 0 0 1px #6272a4, 0 0 20px rgba(0, 0, 0, 0.5)',
-      }
+        'sketch': '2px 2px 0px #2c3e50',
+        'sketch-hover': '4px 4px 0px #2c3e50',
+      },
     },
   },
   plugins: [],

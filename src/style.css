@@ -8,18 +8,18 @@
 :root {
   --paper: #fdfbf7;
   --pencil: #2c3e50;
-  --line: #e0e0e0;
+  --line: #e8e8e8;
 }
 
 body {
   @apply bg-paper text-pencil font-hand overflow-x-hidden;
-  background-image: linear-gradient(#e0e0e0 1px, transparent 1px), linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -73,8 +73,12 @@ body {
 }
 
 .sketch-btn {
-  @apply inline-block px-6 py-2 border-2 border-pencil bg-white hover:bg-marker-yellow transition-colors duration-300 font-bold text-lg cursor-pointer;
+  @apply inline-block px-6 py-2 border-2 border-pencil bg-white hover:bg-marker-yellow transition-colors duration-300 font-bold cursor-pointer;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+.sketch-btn:focus-visible {
+  @apply outline-none ring-2 ring-pencil ring-offset-2 ring-offset-paper;
 }
 
 .nav-link {
@@ -91,35 +95,27 @@ body {
 }
 
 .section-title {
-  @apply text-4xl font-bold mb-8 inline-block highlight-yellow;
+  @apply text-3xl md:text-4xl font-bold mb-8 inline-block highlight-yellow;
   transform: rotate(-1deg);
 }
 
-/* Sticky Note Style */
-.sticky-note {
-  @apply p-6 shadow-sketch transform rotate-1 bg-marker-yellow text-pencil;
-  border-radius: 2px;
+/* Sticky CTA */
+#sticky-cta {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.sticky-note-pink {
-  @apply p-6 shadow-sketch transform -rotate-1 bg-marker-pink text-pencil;
+#sticky-cta.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
-.sticky-note-blue {
-  @apply p-6 shadow-sketch transform rotate-2 bg-marker-blue text-pencil;
+#sticky-cta:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Animations */
-@keyframes draw {
-  from {
-    stroke-dashoffset: 1000;
-  }
-
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-draw {
-  animation: draw 2s ease-out forwards;
+/* Responsive mobile nav */
+.mobile-nav-open {
+  @apply flex flex-col absolute top-16 left-0 w-full bg-paper p-4 shadow-sketch border-b-2 border-pencil border-dashed;
 }

@@ -117,44 +117,5 @@ body {
 
 /* Responsive mobile nav */
 .mobile-nav-open {
-  @apply flex flex-col absolute top-full left-0 w-full bg-paper p-4 shadow-sketch border-b-2 border-pencil border-dashed;
-}
-
-/* Expertise / category tags */
-.tag {
-  @apply text-sm border-2 border-pencil px-3 py-1 font-bold bg-white;
-  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
-}
-
-/* Trust pills in hero */
-.trust-pill {
-  @apply text-xs font-bold border border-pencil px-3 py-1;
-  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
-}
-
-/* Company chips */
-.company-pill {
-  @apply text-xs font-bold text-center border border-pencil-light px-2 py-1 text-pencil-light;
-  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
-}
-
-/* Certification section */
-.cert-group-label {
-  @apply text-xs font-bold uppercase tracking-widest text-pencil-light mb-3;
-}
-
-.cert-badge-link {
-  @apply flex flex-col items-center gap-1 text-center p-2 rounded transition-all duration-200 hover:-translate-y-1 hover:bg-marker-yellow/20 no-underline;
-}
-
-.cert-img {
-  @apply w-16 h-16 object-contain;
-}
-
-.cert-name {
-  @apply text-xs font-bold text-pencil leading-tight;
-}
-
-.cert-code {
-  @apply text-xs text-pencil-light;
+  @apply flex flex-col absolute top-16 left-0 w-full bg-paper p-4 shadow-sketch border-b-2 border-pencil border-dashed;
 }

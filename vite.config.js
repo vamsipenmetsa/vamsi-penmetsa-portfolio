@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/vamsi-penmetsa-portfolio/',
+  base: '/devops-portfolio/',  // Updated for GitHub Pages repository name
   server: {
     open: true
   }
